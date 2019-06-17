@@ -218,7 +218,7 @@ export default class Color {
   public get hsv() {
     // _value is cloned to allow changes to be made to the values before passing them back
     const value = this.value;
-    return {h: value.h, s: value.s, v: value.v};
+    return {h: value.h, s: value.s, v: value.v, a: value.a};
   }
 
   public set hsv(newValue) {
@@ -232,7 +232,8 @@ export default class Color {
       let changes: HSV = {
         h: 0,
         v: 0,
-        s: 0
+        s: 0,
+        a: 0
       };
 
       for (let key in oldValue) {
@@ -259,7 +260,7 @@ export default class Color {
   public set rgb(value: any) {
     this.hsv = {
       ...Color.rgbToHsv(value), 
-      // a: (value.a === undefined) ? 1 : value.a
+      a: (value.a === undefined) ? 1 : value.a
     };
   }
 
@@ -275,7 +276,7 @@ export default class Color {
   public set hsl(value: any) {
     this.hsv = {
       ...Color.hslToHsv(value), 
-      // a: (value.a === undefined) ? 1 : value.a
+      a: (value.a === undefined) ? 1 : value.a
     };
   }
 

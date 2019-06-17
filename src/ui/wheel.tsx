@@ -28,7 +28,7 @@ export default abstract class IroWheel extends IroComponent {
     * @param {DOMRect} rect - bounding client rect for the component's base element
     * @param {String} type - input type: "START", "MOVE" or "END"
   */
-  public handleInput(x: number, y: number, { left, top }, type: string) {
+  public handleInput(x: number, y: number, { left, top }, type: any) {
     const props = this.props;
     const radius = props.width / 2;
     const handleRange = (radius - props.padding - props.handleRadius - props.borderWidth);

@@ -128,7 +128,7 @@ export default class IroSlider extends IroComponent {
     * @param {DOMRect} rect - bounding client rect for the component's base element
     * @param {String} type - input type: "START", "MOVE" or "END"
   */
-  handleInput(x: number, y: number, bounds: DOMRect, type: string) {
+  handleInput(x: number, y: number, bounds: DOMRect | ClientRect, type: any) {
     let value = this.getValueFromPoint(x, y, bounds);
     let channel;
     switch (this.props.sliderType) {

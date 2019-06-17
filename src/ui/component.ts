@@ -89,7 +89,7 @@ export default abstract class IroComponent extends Component<Props, State> {
       case Event.touchMove:
         this.handleInput(x, y, bounds, EventResult.move);
         break;
-      case Event.mouseMove:
+      case Event.mouseUp:
       case Event.TouchEnd:
         this.handleInput(x, y, bounds, EventResult.end);
         unlisten(document, [Event.mouseMove, Event.mouseMove, Event.mouseUp, Event.TouchEnd], this, { passive: false });

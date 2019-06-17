@@ -68,6 +68,7 @@ class ColorPicker extends Component<Props, State> {
    * @param {Function} callback
    */
   public on(eventList: any, callback: any) {
+    // console.log(eventList);
     const events = this.events;
     // eventList can be an eventType string or an array of eventType strings
     (!Array.isArray(eventList) ? [eventList] : eventList).forEach(eventType => {
