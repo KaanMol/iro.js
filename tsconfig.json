@@ -1,12 +1,13 @@
 {
     "compilerOptions": {
         "baseUrl": ".",
-        "paths": { "*": ["types/*"] },
-        "outDir": "./built",
+        "paths": { "*": ["typings/*"] },
+        "outDir": "dist",
         "target": "es6",
         "jsx": "react",
         "jsxFactory": "h",
         "declaration": true,
+        "declarationDir": "typings",
         "sourceMap": true,
         "module": "commonjs",
     },

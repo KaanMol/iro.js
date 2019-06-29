@@ -4,7 +4,7 @@
   "description": "An HSV color picker widget for JavaScript, with a modern SVG-based user interface",
   "module": "dist/iro.es.js",
   "main": "dist/iro.js",
-  "types": "dist/index.d.ts",
+  "types": "typings/index.d.ts",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
@@ -108,8 +108,6 @@
   },
   "homepage": "https://iro.js.org",
   "dependencies": {
-    "@types/react": "^16.8.17",
-    "@types/react-dom": "^16.8.4",
     "ts-loader": "^6.0.0",
     "typescript": "^3.4.5"
   }
