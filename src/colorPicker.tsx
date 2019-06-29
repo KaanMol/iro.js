@@ -17,11 +17,11 @@ export interface State {
 }
 
 class ColorPicker extends Component<Props, State> {
-  private events: object;
-  private deferredEvents: object;
-  private colorUpdateActive: boolean;
-  private colorUpdateSrc: string;
-  public color: any;
+  private events: object = {};
+  private deferredEvents: object = {};
+  private colorUpdateActive: boolean = false;
+  private colorUpdateSrc: string = null;
+  public color: IroColor;
   public layout: Array<any>;
   public static pluginHooks: any;
   public defaultProps: object;
@@ -31,10 +31,6 @@ class ColorPicker extends Component<Props, State> {
   constructor(props: any) {
     super(props, {});
     this.emitHook('init:before');
-    this.events = {};
-    this.deferredEvents = {};
-    this.colorUpdateActive = false;
-    this.colorUpdateSrc = null;
     this.id = props.id;
     this.color = new IroColor(props.color);
     this.deferredEmit('color:init', this.color, { h: false, s: false, v: false, a: false });
@@ -68,7 +64,6 @@ class ColorPicker extends Component<Props, State> {
    * @param {Function} callback
    */
   public on(eventList: any, callback: any) {
-    // console.log(eventList);
     const events = this.events;
     // eventList can be an eventType string or an array of eventType strings
     (!Array.isArray(eventList) ? [eventList] : eventList).forEach(eventType => {
@@ -225,6 +220,8 @@ class ColorPicker extends Component<Props, State> {
     // Super important to do this here and not in updateColor()
     this.colorUpdateSrc = null;
   }
+
+  // componentDidMount() {}
 
   public render(props: any, state: any) {
     return (

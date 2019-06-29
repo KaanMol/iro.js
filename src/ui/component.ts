@@ -1,13 +1,6 @@
 import { Component } from 'preact';
 import { listen, unlisten } from '../util/dom';
 
-const EVENT_MOUSEDOWN = 'mousedown';
-const EVENT_MOUSEMOVE = 'mousemove';
-const EVENT_MOUSEUP = 'mouseup';
-const EVENT_TOUCHSTART = 'touchstart';
-const EVENT_TOUCHMOVE = 'touchmove';
-const EVENT_TOUCHEND = 'touchend';
-
 enum Event {
   mouseDown = "mousedown",
   mouseMove = "mousemove",
