@@ -8,8 +8,7 @@
         "jsxFactory": "h",
         "declaration": true,
         "declarationDir": "typings",
-        "sourceMap": true,
-        "module": "commonjs",
+        "sourceMap": true
     },
     "include": [
         "./src/**/*.ts",
